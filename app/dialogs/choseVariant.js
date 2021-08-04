@@ -10,9 +10,7 @@ module.exports = function(bot) {
       } else if (item.color.length === 1) {
         builder.Prompts.confirm(
           session,
-          `${item.title} only comes in one color - ${
-            item.color[0]
-          }. Do you like it?`,
+          `${item.title} only comes in one color - ${item.color[0]}. Do you like it?`,
           {
             listStyle: builder.ListStyle.button
           }

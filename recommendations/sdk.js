@@ -79,9 +79,7 @@ module.exports = apikey => {
             );
           } else {
             console.info(
-              `Succesfully imported ${
-                results.importedLineCount
-              } catalog entries`
+              `Succesfully imported ${results.importedLineCount} catalog entries`
             );
           }
         }),

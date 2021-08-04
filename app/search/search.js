@@ -90,9 +90,7 @@ module.exports = {
             const isSizeMatch = v.size === size || (!v.size && !size);
 
             console.log(
-              `Checking if ${v.id} with ${v.size}-${
-                v.color
-              } is the right one for ${size}-${color}`
+              `Checking if ${v.id} with ${v.size}-${v.color} is the right one for ${size}-${color}`
             );
 
             return (

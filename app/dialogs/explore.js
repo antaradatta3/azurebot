@@ -76,9 +76,7 @@ const listProducts = (session, products, start = 0) => {
 
   if (start === 0) {
     session.send(
-      `I found ${
-        products.length
-      } products and here are the best matches. Tap on the image to take a closer look.`
+      `I found ${products.length} products and here are the best matches. Tap on the image to take a closer look.`
     );
   }
 

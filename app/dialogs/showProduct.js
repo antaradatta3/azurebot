@@ -10,7 +10,7 @@ const showProduct = function(session, product) {
     .text(product.description)
     .buttons(
       product.modifiers.length === 0 ||
-      (product.size.length <= 1 && product.color.length <= 1)
+        (product.size.length <= 1 && product.color.length <= 1)
         ? [
             builder.CardAction.postBack(
               session,

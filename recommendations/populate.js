@@ -58,9 +58,7 @@ sdk.model
     build = result;
 
     console.log(
-      `FBT build ${
-        build.buildId
-      } created succesfully. Will now wait for the training to finish.`
+      `FBT build ${build.buildId} created succesfully. Will now wait for the training to finish.`
     );
 
     return repeater.repeat(() => sdk.build.get(model.id, build.buildId), {

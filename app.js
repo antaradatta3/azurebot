@@ -99,7 +99,9 @@ bot.dialog('/checkout', [
 
 const app = express();
 // app.get(`/`, (_, res) => res.sendFile(path.join(__dirname + '/index.html')));
-app.get(`/`, (_, res) => res.sendFile('D:\\poc\\chatbot\\ecommerce-chatbot/index.html'));
+app.get(`/`, (_, res) =>
+  res.sendFile('D:\\poc\\chatbot\\ecommerce-chatbot/index.html')
+);
 app.post('/api/messages', connector.listen());
 
 app.listen(process.env.PORT || process.env.port || 3978, () => {
