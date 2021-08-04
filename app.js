@@ -52,7 +52,10 @@ intents.matches('Reset', '/reset');
 intents.matches('Smile', '/smileBack');
 intents.onDefault('/confused');
 
-bot.dialog('/', intents);
+// bot.dialog('/', intents);
+bot.dialog('/', function(session) {
+  session.send('You said ' + session.message.text);
+});
 dialog.welcome(bot);
 dialog.categories(bot);
 dialog.explore(bot);
