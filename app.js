@@ -3,6 +3,7 @@ const express = require('express');
 const greeting = require('./app/recognizer/greeting');
 const commands = require('./app/recognizer/commands');
 const smiles = require('./app/recognizer/smiles');
+const path = require('path');
 
 const dialog = {
   welcome: require('./app/dialogs/welcome'),
@@ -98,6 +99,7 @@ bot.dialog('/checkout', [
 ]);
 
 const app = express();
+
 app.get(`/`, (_, res) => res.sendFile(path.join(__dirname + '/index.html')));
 // app.get(`/`, (_, res) =>
 //   res.sendFile('D:\\poc\\chatbot\\ecommerce-chatbot/index.html')
