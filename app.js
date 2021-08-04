@@ -20,6 +20,11 @@ const connector = new builder.ChatConnector({
   appPassword: process.env.MICROSFT_APP_PASSWORD
 });
 
+// const connector = new builder.ChatConnector({
+//   appId: "f5c45411-326e-48ad-a7f2-88d079cdfc44",
+//   appPassword: "917742e3-948c-498a-9849-83e0af87dfff"
+// });
+
 const bot = new builder.UniversalBot(connector, {
   persistConversationData: true
 });
@@ -93,8 +98,8 @@ bot.dialog('/checkout', [
 ]);
 
 const app = express();
-
-app.get(`/`, (_, res) => res.sendFile(path.join(__dirname + '/index.html')));
+// app.get(`/`, (_, res) => res.sendFile(path.join(__dirname + '/index.html')));
+app.get(`/`, (_, res) => res.sendFile('D:\\poc\\chatbot\\ecommerce-chatbot/index.html'));
 app.post('/api/messages', connector.listen());
 
 app.listen(process.env.PORT || process.env.port || 3978, () => {
